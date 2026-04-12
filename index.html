@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance DApp (No MetaMask)</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
+</head>
+
+<body>
+    <h2>📘 Blockchain Attendance System</h2>
+
+    <input type="text" id="name" placeholder="Enter Name"><br><br>
+    <input type="text" id="date" placeholder="Enter Date"><br><br>
+    <input type="text" id="status" placeholder="Present / Absent"><br><br>
+
+    <button onclick="markAttendance()">Submit</button>
+    <button onclick="getRecords()">View Records</button>
+
+    <h3>📋 Records:</h3>
+    <ul id="records"></ul>
+
+<script>
+const contractAddress = "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
+
+const abi = [
+    {
+        "inputs": [
+            {"internalType": "string","name": "_name","type": "string"},
+            {"internalType": "string","name": "_date","type": "string"},
+            {"internalType": "string","name": "_status","type": "string"}
+        ],
+        "name": "markAttendance",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getRecords",
+        "outputs": [
+            {
+                "components": [
+                    {"internalType": "string","name": "name","type": "string"},
+                    {"internalType": "string","name": "date","type": "string"},
+                    {"internalType": "string","name": "status","type": "string"}
+                ],
+                "internalType": "tuple[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+];
+
+// Connect to local blockchain
+const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+
+// Use Hardhat account (same private key)
+const wallet = new ethers.Wallet(
+    "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+    provider
+);
+
+const contract = new ethers.Contract(contractAddress, abi, wallet);
+
+// Submit attendance
+async function markAttendance() {
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+    const status = document.getElementById("status").value;
+
+    const tx = await contract.markAttendance(name, date, status);
+    await tx.wait();
+
+    alert("✅ Attendance stored on blockchain!");
+}
+
+// Get records
+async function getRecords() {
+    const records = await contract.getRecords();
+
+    const list = document.getElementById("records");
+    list.innerHTML = "";
+
+    records.forEach(r => {
+        const li = document.createElement("li");
+        li.innerText = `${r.name} - ${r.date} - ${r.status}`;
+        list.appendChild(li);
+    });
+}
+</script>
+
+</body>
+</html>

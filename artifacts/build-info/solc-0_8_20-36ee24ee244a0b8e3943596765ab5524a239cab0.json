@@ -1,0 +1,36 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_20-36ee24ee244a0b8e3943596765ab5524a239cab0",
+  "solcVersion": "0.8.20",
+  "solcLongVersion": "0.8.20+commit.a1b79de6",
+  "compilerType": "solc",
+  "userSourceNameMap": {
+    "contracts/Attendance.sol": "project/contracts/Attendance.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/Attendance.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract Attendance {\r\n\r\n    struct Record {\r\n        string studentName;\r\n        string date;\r\n        bool isPresent;\r\n    }\r\n\r\n    Record[] public records;\r\n\r\n    address public teacher;\r\n\r\n    constructor() {\r\n        teacher = msg.sender;\r\n    }\r\n\r\n    modifier onlyTeacher() {\r\n        require(msg.sender == teacher, \"Only teacher allowed\");\r\n        _;\r\n    }\r\n\r\n    function markAttendance(\r\n        string memory name,\r\n        string memory date,\r\n        bool status\r\n    ) public onlyTeacher {\r\n        records.push(Record(name, date, status));\r\n    }\r\n\r\n    function getRecords() public view returns (Record[] memory) {\r\n        return records;\r\n    }\r\n\r\n    function getAttendanceCount() public view returns (uint) {\r\n        return records.length;\r\n    }\r\n\r\n    function getAttendance(uint index)\r\n        public\r\n        view\r\n        returns (string memory, string memory, bool)\r\n    {\r\n        Record memory r = records[index];\r\n        return (r.studentName, r.date, r.isPresent);\r\n    }\r\n}"
+      }
+    }
+  }
+}
