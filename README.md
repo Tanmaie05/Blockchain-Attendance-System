@@ -56,34 +56,33 @@ requirements.txt: Python dependencies
 
 ▶️**How to Run Locally**
 
-1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/blockchain-attendance-system.git
-cd blockchain-attendance-system
-```
+1.Open Project Folder
+cd C:\Users\tanma\OneDrive\Desktop\BLockchain-Project
 
-2. Install dependencies
-```bash
-pip install -r requirements.txt
-npm install
-```
-
-3. Start blockchain
-```bash
+2.Start Hardhat Blockchain
 npx hardhat node
-```
+⚠️Keep this terminal running. Do not close it.
 
-4. Deploy smart contract
-```bash
+3.Open a New Terminal
+cd C:\Users\tanma\OneDrive\Desktop\BLockchain-Project
+
+4.Compile Smart Contract
+npx hardhat compile
+
+5.Deploy Smart Contract
 npx hardhat run scripts/deploy.js --network localhost
-```
+After deployment, you will see:
+Contract deployed to: 0xABC123...
+Copy this contract address and update it in app.py:
 
-5. Update contract address in `app.py`
+6.Install Dependencies
+pip install streamlit web3 pandas
 
-6. Run the application
-```bash
+7.Run the Application
 streamlit run app.py
-```
+
+8.Open in Browser
+http://localhost:8501
 
 🌐**Deployment**
 
