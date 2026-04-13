@@ -10,19 +10,19 @@ The system provides:
 * Student dashboard with attendance insights
 * Automated attendance percentage calculation
 
-🛠️**Tech Stack**
+🛠️ Tech Stack
 *Blockchain*
-* Ethereum (Hardhat Local Network)
-* Solidity (Smart Contracts)
-* Hardhat (Development & Deployment)
+Ethereum (Hardhat Local Network)
+Solidity (Smart Contracts)
+Hardhat (Development & Deployment)
 *Backend*
-* Python
-* Web3.py (Blockchain interaction)
+Python
+Web3.py (Blockchain interaction)
 *Frontend*
-* Streamlit (Web UI)
+Streamlit (Web UI)
 *Data Handling*
-* Pandas
-* CSV (Student data)
+Pandas
+CSV (Student data)
 
 ⚙️**Features**
 * Secure Faculty Login
