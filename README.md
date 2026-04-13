@@ -3,6 +3,7 @@
 A decentralized web application that securely records and manages student attendance using blockchain technology. This system ensures immutability, transparency, and tamper-proof record keeping, solving limitations of traditional attendance systems.
 
 🚀**Project Overview**
+
 This project implements a **blockchain-powered attendance system** where attendance records are stored on a smart contract instead of a centralized database. Once recorded, data cannot be modified, ensuring trust and integrity.
 The system provides:
 * Faculty login for secure access
