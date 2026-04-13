@@ -11,25 +11,20 @@ The system provides:
 * Automated attendance percentage calculation
 
 🛠️**Tech Stack**
-
 *Blockchain*
 * Ethereum (Hardhat Local Network)
 * Solidity (Smart Contracts)
 * Hardhat (Development & Deployment)
-
 *Backend*
 * Python
 * Web3.py (Blockchain interaction)
-
 *Frontend*
 * Streamlit (Web UI)
-
 *Data Handling*
 * Pandas
 * CSV (Student data)
 
 ⚙️**Features**
-
 * Secure Faculty Login
 * Immutable Attendance Records (Blockchain)
 * Student Dashboard
@@ -39,13 +34,18 @@ The system provides:
 * Real-time Data Fetching
 
 📂**Project Structure**
-
 blockchain-attendance-system/
+
 app.py: Streamlit application
+
 students.csv: Student list
+
 abi.json: Smart contract ABI
+
 contracts/: Solidity contract
+
 scripts/: Deployment scripts
+
 requirements.txt: Python dependencies
 
 ▶️**How to Run Locally**
