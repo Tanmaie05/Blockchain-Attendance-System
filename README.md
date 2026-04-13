@@ -42,17 +42,17 @@ CSV (Student data)
 
 blockchain-attendance-system/
 
-app.py: Streamlit application
+    app.py: Streamlit application
 
-students.csv: Student list
+    students.csv: Student list
+    
+    abi.json: Smart contract ABI
 
-abi.json: Smart contract ABI
+    contracts/: Solidity contract
 
-contracts/: Solidity contract
+    scripts/: Deployment scripts
 
-scripts/: Deployment scripts
-
-requirements.txt: Python dependencies
+    requirements.txt: Python dependencies
 
 ▶️**How to Run Locally**
 
