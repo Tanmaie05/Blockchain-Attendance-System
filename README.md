@@ -11,6 +11,7 @@ The system provides:
 * Automated attendance percentage calculation
 
 🛠️**Tech Stack**
+
 *Blockchain*
 * Ethereum (Hardhat Local Network)
 * Solidity (Smart Contracts)
@@ -28,6 +29,7 @@ The system provides:
 * CSV (Student data)
 
 ⚙️**Features**
+
 * Secure Faculty Login
 * Immutable Attendance Records (Blockchain)
 * Student Dashboard
@@ -37,6 +39,7 @@ The system provides:
 * Real-time Data Fetching
 
 📂**Project Structure**
+
 blockchain-attendance-system/
 app.py: Streamlit application
 students.csv: Student list
@@ -46,6 +49,7 @@ scripts/: Deployment scripts
 requirements.txt: Python dependencies
 
 ▶️**How to Run Locally**
+
 1. Clone the repository
 ```bash
 git clone https://github.com/YOUR_USERNAME/blockchain-attendance-system.git
@@ -76,6 +80,7 @@ streamlit run app.py
 ```
 
 🌐**Deployment**
+
 The application can be deployed using:
 * Streamlit Cloud (UI)
 * Ethereum Testnet (Sepolia)
