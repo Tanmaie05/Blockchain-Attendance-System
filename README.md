@@ -11,15 +11,19 @@ The system provides:
 * Automated attendance percentage calculation
 
 🛠️ Tech Stack
+
 *Blockchain*
 Ethereum (Hardhat Local Network)
 Solidity (Smart Contracts)
 Hardhat (Development & Deployment)
+
 *Backend*
 Python
 Web3.py (Blockchain interaction)
+
 *Frontend*
 Streamlit (Web UI)
+
 *Data Handling*
 Pandas
 CSV (Student data)
