@@ -57,32 +57,40 @@ blockchain-attendance-system/
 ▶️**How to Run Locally**
 
 1.Open Project Folder
-cd C:\Users\tanma\OneDrive\Desktop\BLockchain-Project
+
+    cd C:\Users\tanma\OneDrive\Desktop\BLockchain-Project
 
 2.Start Hardhat Blockchain
-npx hardhat node
+
+    npx hardhat node
 ⚠️Keep this terminal running. Do not close it.
 
 3.Open a New Terminal
-cd C:\Users\tanma\OneDrive\Desktop\BLockchain-Project
+
+    cd C:\Users\tanma\OneDrive\Desktop\BLockchain-Project
 
 4.Compile Smart Contract
-npx hardhat compile
+
+    npx hardhat compile
 
 5.Deploy Smart Contract
-npx hardhat run scripts/deploy.js --network localhost
+
+    npx hardhat run scripts/deploy.js --network localhost
 After deployment, you will see:
 Contract deployed to: 0xABC123...
 Copy this contract address and update it in app.py:
 
 6.Install Dependencies
-pip install streamlit web3 pandas
+
+    pip install streamlit web3 pandas
 
 7.Run the Application
-streamlit run app.py
+
+    streamlit run app.py
 
 8.Open in Browser
-http://localhost:8501
+
+    http://localhost:8501
 
 🌐**Deployment**
 
