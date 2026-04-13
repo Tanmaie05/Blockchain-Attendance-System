@@ -38,6 +38,7 @@ CSV (Student data)
 * Real-time Data Fetching
 
 📂**Project Structure**
+
 blockchain-attendance-system/
 
 app.py: Streamlit application
