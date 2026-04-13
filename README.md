@@ -1,4 +1,5 @@
-Ledger-based Attendance Viewer:
+**Ledger-based Attendance Viewer**:
+
 A decentralized web application that securely records and manages student attendance using blockchain technology. This system ensures immutability, transparency, and tamper-proof record keeping, solving limitations of traditional attendance systems.
 
 🚀 Project Overview
