@@ -12,20 +12,20 @@ The system provides:
 
 🛠️ Tech Stack
 
-*Blockchain*
-Ethereum (Hardhat Local Network)
-Solidity (Smart Contracts)
+*Blockchain*:
+Ethereum (Hardhat Local Network),
+Solidity (Smart Contracts),
 Hardhat (Development & Deployment)
 
-*Backend*
-Python
+*Backend*:
+Python,
 Web3.py (Blockchain interaction)
 
-*Frontend*
+*Frontend*:
 Streamlit (Web UI)
 
-*Data Handling*
-Pandas
+*Data Handling*:
+Pandas,
 CSV (Student data)
 
 ⚙️**Features**
